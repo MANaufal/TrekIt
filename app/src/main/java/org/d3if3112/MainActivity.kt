@@ -32,18 +32,14 @@ class MainActivity : AppCompatActivity() {
             setHasFixedSize(false)
         }
 
-        val button: Button = findViewById(R.id.addButton)
-        button.setOnClickListener {
-            showdialog()
-//            foodList.add(food("cobacoba", 9000))
-//            Log.d("Main Activity",foodList.toString())
-//            binding.recyclerView.adapter?.notifyDataSetChanged()
+        binding.addButton.setOnClickListener{
+            showDialog()
         }
     }
 
-    fun showdialog(){
+    fun showDialog(){
         val builder: android.app.AlertDialog.Builder = android.app.AlertDialog.Builder(this)
-        builder.setTitle("Title")
+        builder.setTitle("Add Food")
 
         val inputString = EditText(this)
         val inputInt = EditText(this)

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">TrekIt</string>
-    <string name="button">Add Item</string>
+    <string name="button">Add Food</string>
     <string name="titleScreen">Add Food</string>
     <string name="calText">Food Calories</string>
     <string name="nameTextView">Food Name</string>
