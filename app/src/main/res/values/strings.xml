@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TrekIt</string>
+    <string name="button">Add Item</string>
+    <string name="titleScreen">Add Food</string>
+    <string name="calText">Food Calories</string>
+    <string name="nameTextView">Food Name</string>
+    <string name="confirmButton">Add Food</string>
+    <string name="name_invalid">Food name cannot be empty</string>
+    <string name="cal_invalid">Calories cannot be empty</string>
+</resources>
