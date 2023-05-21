@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="warning_text_margin_start">16dp</dimen>
+    <dimen name="warning_text_margin_top">16dp</dimen>
+    <dimen name="warning_text_margin_end">16dp</dimen>
+    <dimen name="warning_text_margin_bottom">16dp</dimen>
+</resources>

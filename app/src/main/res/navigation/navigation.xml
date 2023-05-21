@@ -7,14 +7,26 @@
     <fragment
         android:id="@+id/foodList"
         android:name="org.d3if3112.view.foodList"
-        android:label="fragment_foodlist"
+        android:label="TrekIt"
         tools:layout="@layout/fragment_foodlist" >
         <action
             android:id="@+id/action_foodList_to_inputFragment"
             app:destination="@id/inputFragment" />
+        <action
+            android:id="@+id/action_foodList_to_about"
+            app:destination="@id/about" />
     </fragment>
     <fragment
         android:id="@+id/inputFragment"
         android:name="org.d3if3112.view.InputFragment"
-        android:label="InputFragment" />
+        android:label="TrekIt" >
+        <action
+            android:id="@+id/action_inputFragment_to_about"
+            app:destination="@id/about" />
+    </fragment>
+    <fragment
+        android:id="@+id/about"
+        android:name="org.d3if3112.view.about"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
 </navigation>
