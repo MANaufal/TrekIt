@@ -36,7 +36,7 @@ class FoodAdapter(private val listener : OnItemClickListener) : ListAdapter<Food
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(food: FoodEntity) = with(binding) {
             nameTextView.text = food.foodName
-            calTextView.text = food.calories.toString()
+            calTextView.text = "Calories: " + food.calories.toString()
 
             binding.buttonDelete.setOnClickListener{
                 listener.onDeleteItem(food)

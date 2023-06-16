@@ -2,13 +2,9 @@ package org.d3if3112.view
 
 import android.content.DialogInterface
 import android.os.Bundle
-import android.text.InputType
-import android.util.Log
 import android.view.*
-import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -18,16 +14,12 @@ import org.d3if3112.R
 import org.d3if3112.databinding.FragmentFoodlistBinding
 import org.d3if3112.db.FoodEntity
 import org.d3if3112.db.TrekDb
-import org.d3if3112.model.Food
 import org.d3if3112.viewModel.FoodListViewModel
 import org.d3if3112.viewModel.FoodViewModelFactory
 
 class foodList: Fragment() {
     private lateinit var binding: FragmentFoodlistBinding
     private lateinit var foodAdapter: FoodAdapter
-    private var foodList = ArrayList<Food>()
-    private var inputName: String = ""
-    private var inputCal: Int = 0
 
     private val viewModel: FoodListViewModel by lazy {
         val db = TrekDb.getInstance(requireContext())
@@ -60,6 +52,12 @@ class foodList: Fragment() {
         binding.addButton.setOnClickListener{
             findNavController().navigate(
                 R.id.action_foodList_to_inputFragment
+            )
+        }
+
+        binding.searchButton.setOnClickListener {
+            findNavController().navigate(
+                R.id.action_foodList_to_searchFragment
             )
         }
         return binding.root

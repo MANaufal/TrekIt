@@ -24,4 +24,13 @@
         android:textColorLink="#FFFFFF"
         app:rippleColor="#9E9E9E" />
 
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button2"
+        android:textColor="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        app:rippleColor="#9E9E9E" />
+
 </LinearLayout>

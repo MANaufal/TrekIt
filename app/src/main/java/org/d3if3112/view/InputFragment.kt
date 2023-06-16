@@ -57,14 +57,12 @@ class InputFragment : Fragment() {
             } else if(calories == ""){
                 Toast.makeText(context, R.string.cal_invalid, Toast.LENGTH_LONG).show()
             } else {
-                val foodIn: FoodEntity = FoodEntity(foodName = name, calories = calories.toInt())
+                val foodIn: FoodEntity = FoodEntity(foodName = name, calories = calories.toDouble())
 
                 viewModel.insertFood(foodIn)
 
                 findNavController().navigateUp()
             }
-
-
         }
 
         return binding.root

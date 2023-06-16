@@ -15,6 +15,9 @@
         <action
             android:id="@+id/action_foodList_to_about"
             app:destination="@id/about" />
+        <action
+            android:id="@+id/action_foodList_to_searchFragment"
+            app:destination="@id/searchFragment" />
     </fragment>
     <fragment
         android:id="@+id/inputFragment"
@@ -29,4 +32,9 @@
         android:name="org.d3if3112.view.about"
         android:label="fragment_about"
         tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="org.d3if3112.view.searchList"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
 </navigation>
