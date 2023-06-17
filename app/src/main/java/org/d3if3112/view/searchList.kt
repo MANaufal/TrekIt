@@ -11,10 +11,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.*
+import org.d3if3112.MainActivity
 import org.d3if3112.R
 import org.d3if3112.databinding.FragmentFoodlistBinding
 import org.d3if3112.databinding.FragmentSearchBinding
@@ -104,17 +102,31 @@ class searchList: Fragment() {
         }
     }
 
+    private var job: Job? = null
+
     private fun showLoadingIndicator() {
         progressDialog = ProgressDialog(requireContext())
         progressDialog.setMessage("Loading...")
         progressDialog.setCancelable(false)
         progressDialog.show()
+
+        job = CoroutineScope(Dispatchers.Default).launch {
+            delay(2000)
+
+            withContext(Dispatchers.Main) {
+                if (isAdded) {
+                    fetchApiData("searchQuery")
+                    hideLoadingIndicator()
+                }
+            }
+        }
     }
 
     private fun hideLoadingIndicator() {
         if (progressDialog.isShowing) {
             progressDialog.dismiss()
         }
+        job?.cancel()
     }
 
     private fun noResultDialog(message: String) {

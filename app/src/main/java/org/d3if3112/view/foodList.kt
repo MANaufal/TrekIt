@@ -47,6 +47,7 @@ class foodList: Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+
         binding = FragmentFoodlistBinding.inflate(inflater, container, false)
 
         binding.addButton.setOnClickListener{
@@ -64,6 +65,8 @@ class foodList: Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+
             foodAdapter = FoodAdapter(object: FoodAdapter.OnItemClickListener {
                 override fun onDeleteItem(food: FoodEntity) {
                     showDialog(food)

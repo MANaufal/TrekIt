@@ -9,12 +9,9 @@
     <string name="name_invalid">Food name cannot be empty</string>
     <string name="cal_invalid">Calories cannot be empty</string>
     <string name="HelloWord">Hello world</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="copyright">TrekIt is a mobile android based application to track your daily calories intake.\n\nCopyright©Manaufal. \nAll rights reserved.</string>
     <string name="buttonDay">Add new day</string>
     <string name="dataEmpty">Please Add a new day</string>
     <string name="about_app">About</string>
     <string name="button2">Search Food</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
